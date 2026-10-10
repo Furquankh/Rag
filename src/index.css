@@ -1,0 +1,87 @@
+/*
+  Professional RAG Document Assistant - Global Styles
+  Sophisticated color system for a real productivity tool.
+*/
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-serif: 'Georgia', 'Times New Roman', serif;
+
+  /* Light Theme - Warm & Professional */
+  --color-paper: #F6F4F0;
+  --color-paper-deep: #EDECEA;
+  --color-surface: #FFFFFF;
+  --color-surface-warm: #FAF9F6;
+  --color-ink: #1C1B18;
+  --color-ink-secondary: #5A5852;
+  --color-ink-muted: #8A8778;
+  --color-ink-faint: #B5B2A6;
+  --color-border-subtle: #E0DDD4;
+  --color-border-soft: #D5D1C8;
+  --color-accent: #4A6B5E;        /* Muted deep green */
+  --color-accent-soft: #E8EFEA;
+  --color-accent-strong: #3A554C;
+  --color-amber-soft: #F5EFE6;
+  --color-rose-soft: #F8EFEF;
+
+  /* Dark Theme - Deep Charcoal */
+  --color-paper-dark: #161614;
+  --color-paper-deep-dark: #131311;
+  --color-surface-dark: #1E1D1B;
+  --color-surface-warm-dark: #22211F;
+  --color-ink-dark: #EAE8E0;
+  --color-ink-secondary-dark: #A8A49A;
+  --color-ink-muted-dark: #6E6B61;
+  --color-ink-faint-dark: #4A4842;
+  --color-border-subtle-dark: #2A2824;
+  --color-border-soft-dark: #35322E;
+  --color-accent-dark: #5E8B7B;
+  --color-accent-soft-dark: #1F2D27;
+  --color-amber-soft-dark: #2A2618;
+  --color-rose-soft-dark: #2A1F20;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #D5D1C8; border-radius: 3px; }
+.dark ::-webkit-scrollbar-thumb { background: #35322E; }
+::-webkit-scrollbar-thumb:hover { background: #C2BEB4; }
+.dark ::-webkit-scrollbar-thumb:hover { background: #4A4842; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+body.dark {
+  background-color: var(--color-paper-dark);
+  color: var(--color-ink-dark);
+}
+
+::selection {
+  background: rgba(74, 107, 94, 0.18);
+}
+
+.dark ::selection {
+  background: rgba(94, 139, 123, 0.22);
+}
+
+/* Subtle animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
